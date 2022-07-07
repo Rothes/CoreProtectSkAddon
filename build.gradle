@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'io.github.rothes.coreprotectskaddon'
+version '1.0'
+
+repositories {
+    mavenCentral()
+
+    maven {
+        url = "https://maven.playpro.com/"
+    }
+    maven {
+        url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
+    }
+    maven {
+        url = 'https://repo.skriptlang.org/releases'
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    compileOnly 'org.spigotmc:spigot-api:1.19-R0.1-SNAPSHOT'
+    compileOnly 'net.coreprotect:coreprotect:21.2'
+    compileOnly 'net.coreprotect:coreprotect:21.2'
+    compileOnly 'com.github.SkriptLang:Skript:2.6'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+shadowJar {
+    String fileName = "CoreProtectSkAddon v" + project.version + ".jar"
+    archiveFileName.set(fileName)
+
+    minimize()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
