@@ -30,7 +30,10 @@ public abstract class BaseCOHasExpr extends BaseCOLogExpr {
     }
 
     protected int getTime(Expression<Timespan> timespan, Event event) {
-
+        // offset can be null
+        if (timespan == null) {
+            return 0;
+        }
         return ((int) timespan.getSingle(event).getMilliSeconds() / 1000);
     }
 

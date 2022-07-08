@@ -159,9 +159,9 @@ public final class CoreProtectSkAddon extends JavaPlugin {
         Skript.registerExpression(ExprCOLogInteraction.class, Boolean.class, ExpressionType.COMBINED,
                 "[co] log %string%('[s] interaction| interact[ed]) (of|at) %location%");
         Skript.registerExpression(ExprCOHasPlaced.class, Boolean.class, ExpressionType.COMBINED,
-                "[co] (have|has) %string% placed block %block% in %timespan% before %timespan%");
+                "[co] (have|has) %string% placed block %block% in %timespan% [before %-timespan%]");
         Skript.registerExpression(ExprCOHasRemoved.class, Boolean.class, ExpressionType.COMBINED,
-                "[co] (have|has) %string% removed block %block% in %timespan% before %timespan%");
+                "[co] (have|has) %string% removed block %block% in %timespan% [before %-timespan%]");
 
         Skript.registerExpression(ExprCOResultActionId.class, Integer.class, ExpressionType.COMBINED,
                 "[the] action[ ]id of %coresult%");
