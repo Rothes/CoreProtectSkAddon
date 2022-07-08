@@ -114,7 +114,7 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                         "[with exclude block[s] %-objects%] " +
                         "[with action[s] %-integers%] " +
                         "in %integer% " +
-                        "of %location%");
+                        "(of|at) %location%");
         Skript.registerExpression(ExprCOPerformRollback.class, COResult.class, ExpressionType.COMBINED,
                 "[co] perform rollback " +
                         "[in %-timespan%] " +
@@ -124,7 +124,7 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                         "[with exclude block[s] %-objects%] " +
                         "[with action[s] %-integers%] " +
                         "in %integer% " +
-                        "of %location%");
+                        "(of|at) %location%");
         Skript.registerExpression(ExprCOPerformRestore.class, COResult.class, ExpressionType.COMBINED,
                 "[co] perform restore " +
                         "[in %-timespan%] " +
@@ -134,15 +134,15 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                         "[with exclude block[s] %-objects%] " +
                         "[with action[s] %-integers%] " +
                         "in %integer% " +
-                        "of %location%");
+                        "(of|at) %location%");
         Skript.registerExpression(ExprCOBlockLookup.class, COResult.class, ExpressionType.COMBINED,
                 "[co] block lookup " +
                         "[in %-timespan%] " +
-                        "of %block%");
+                        "(of|at) %block%");
         Skript.registerExpression(ExprCOSessionLookup.class, COResult.class, ExpressionType.COMBINED,
                 "[co] session lookup " +
                         "[in %-timespan%] " +
-                        "of %string%");
+                        "(of|at) %string%");
         Skript.registerExpression(ExprCOQueueLookup.class, COResult.class, ExpressionType.COMBINED,
                 "[co] queue lookup " +
                         "of %block%");
