@@ -99,7 +99,7 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                     @Override
                     @Nonnull
                     public String getVariableNamePattern() {
-                        return null;
+                        return "COResult:[\\d]+,[\\s\\S]+?,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\s\\S]+?,[\\s\\S]+?";
                     }
                 }));
     }
