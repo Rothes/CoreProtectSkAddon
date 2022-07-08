@@ -27,8 +27,8 @@ public final class ExprCOBlockLookup extends BaseCOLookupExpr {
 
     @Override
     public boolean init(Expression<?>[] expressions, int matchedPattern, Kleenean isDelayed, SkriptParser.ParseResult parseResult) {
-        block = (Expression<Block>) expressions[0];
-        time = (Expression<Timespan>) expressions[1];
+        block = (Expression<Block>) expressions[1];
+        time = (Expression<Timespan>) expressions[0];
         return true;
     }
 

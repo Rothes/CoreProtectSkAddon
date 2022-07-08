@@ -26,8 +26,8 @@ public final class ExprCOSessionLookup extends BaseCOLookupExpr {
 
     @Override
     public boolean init(Expression<?>[] expressions, int matchedPattern, Kleenean isDelayed, SkriptParser.ParseResult parseResult) {
-        user = (Expression<String>) expressions[0];
-        time = (Expression<Timespan>) expressions[1];
+        user = (Expression<String>) expressions[1];
+        time = (Expression<Timespan>) expressions[0];
         return true;
     }
 
