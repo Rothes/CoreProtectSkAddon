@@ -40,6 +40,7 @@ import org.bukkit.block.data.BlockData;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import javax.annotation.Nonnull;
 import java.util.logging.Level;
 
 public final class CoreProtectSkAddon extends JavaPlugin {
@@ -78,11 +79,13 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                 .defaultExpression(new EventValueExpression<>(COResult.class))
                 .parser(new Parser<COResult>() {
                     @Override
+                    @Nonnull
                     public String toString(COResult coResult, int flags) {
                         return toVariableNameString(coResult);
                     }
 
                     @Override
+                    @Nonnull
                     public String toVariableNameString(COResult coResult) {
                         StringBuilder builder = new StringBuilder("COResult:");
                         for (String s : coResult.result) {
@@ -94,6 +97,7 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                     }
 
                     @Override
+                    @Nonnull
                     public String getVariableNamePattern() {
                         return null;
                     }
