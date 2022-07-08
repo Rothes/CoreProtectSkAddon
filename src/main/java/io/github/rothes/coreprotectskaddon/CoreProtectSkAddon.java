@@ -174,19 +174,19 @@ public final class CoreProtectSkAddon extends JavaPlugin {
         Skript.registerExpression(ExprCOResultPlayer.class, String.class, ExpressionType.COMBINED,
                 "[the] player of %coresult%");
         Skript.registerExpression(ExprCOResultRolledBack.class, Boolean.class, ExpressionType.COMBINED,
-                "[the] roll(ed |ed|ed-)back of %coresult%", "");
+                "[the] roll(ed |ed|ed-)back of %coresult%");
         Skript.registerExpression(ExprCOResultTimestamp.class, Long.class, ExpressionType.COMBINED,
-                "[the] time[ ]stamp of %coresult%", "");
+                "[the] time[ ]stamp of %coresult%");
         Skript.registerExpression(ExprCOResultType.class, Material.class, ExpressionType.COMBINED,
-                "[the] type of %coresult%", "");
+                "[the] type of %coresult%");
         Skript.registerExpression(ExprCOResultWorldName.class, String.class, ExpressionType.COMBINED,
-                "[the] world[ ]name of %coresult%", "");
+                "[the] world[ ]name of %coresult%");
         Skript.registerExpression(ExprCOResultX.class, Integer.class, ExpressionType.COMBINED,
-                "[the] x of %coresult%", "");
+                "[the] x of %coresult%");
         Skript.registerExpression(ExprCOResultY.class, Integer.class, ExpressionType.COMBINED,
-                "[the] y of %coresult%", "");
+                "[the] y of %coresult%");
         Skript.registerExpression(ExprCOResultZ.class, Integer.class, ExpressionType.COMBINED,
-                "[the] z of %coresult%", "");
+                "[the] z of %coresult%");
     }
 
     private CoreProtectAPI getCoreProtect() {
