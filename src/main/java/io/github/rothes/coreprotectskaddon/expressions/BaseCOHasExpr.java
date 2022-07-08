@@ -26,7 +26,9 @@ public abstract class BaseCOHasExpr extends BaseCOLogExpr {
     @Override
     public String toString(Event event, boolean debug) {
         return this.getClass().getSimpleName().substring(4) + " expression with expressions { user: " + toString(event, debug, user) +
-                ", location: " + toString(event, debug, block) + " }";
+                ", block: " + toString(event, debug, block) +
+                ", time: " + toString(event, debug, time) +
+                ", offset: " + toString(event, debug, offset) + " }";
     }
 
     protected int getTime(Expression<Timespan> timespan, Event event) {
