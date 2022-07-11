@@ -5,6 +5,7 @@ import ch.njol.skript.classes.ClassInfo;
 import ch.njol.skript.classes.Parser;
 import ch.njol.skript.expressions.base.EventValueExpression;
 import ch.njol.skript.lang.ExpressionType;
+import ch.njol.skript.lang.ParseContext;
 import ch.njol.skript.registrations.Classes;
 import io.github.rothes.coreprotectskaddon.effects.EffCOPerformPurge;
 import io.github.rothes.coreprotectskaddon.expressions.ExprCOBlockLookup;
@@ -85,6 +86,16 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                     }
 
                     @Override
+                    public boolean canParse(@Nonnull ParseContext context) {
+                        return false;
+                    }
+
+                    @Override
+                    public COResult parse(@Nonnull String s, @Nonnull ParseContext context) {
+                        return null;
+                    }
+
+                    @Override
                     @Nonnull
                     public String toVariableNameString(COResult coResult) {
                         StringBuilder builder = new StringBuilder("COResult:");
@@ -99,7 +110,7 @@ public final class CoreProtectSkAddon extends JavaPlugin {
                     @Override
                     @Nonnull
                     public String getVariableNamePattern() {
-                        return "COResult:[\\d]+,[\\s\\S]+?,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\d]+,[\\s\\S]+?,[\\s\\S]+";
+                        return "COResult:[\\s\\S]+";
                     }
                 }));
     }
