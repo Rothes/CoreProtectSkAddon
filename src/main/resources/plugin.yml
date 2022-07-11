@@ -1,6 +1,6 @@
 name: CoreProtectSkAddon
 author: Rothes
-version: 1.1
+version: 1.2.0
 api-version: 1.13
 main: io.github.rothes.coreprotectskaddon.CoreProtectSkAddon
 softdepend:
